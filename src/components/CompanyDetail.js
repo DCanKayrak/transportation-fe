@@ -5,6 +5,9 @@ export const CompanyDetail = () => {
   return (
     <section className='company-details'>
       <div className='container'>
+        <div className='go-back'>
+          <a href='/'><i class="fa-solid fa-arrow-left f-back"></i></a>
+        </div>
         <div className='company-details-header'>
           <h3>Şirketimiz Hakkında</h3>
           <hr></hr>
@@ -25,7 +28,7 @@ export const CompanyDetail = () => {
           </div>
           <div className='badges'>
             <div className='badge-container'>
-            <div className='single-badge'>
+              <div className='single-badge'>
                 <div className='c-badge'>
                   <i class="fa-solid fa-truck-fast badge-icon"></i>
                 </div>

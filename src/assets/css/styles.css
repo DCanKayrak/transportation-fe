@@ -13397,3 +13397,34 @@ Order Panel
 .cpanel-icon {
   padding-left: 0.5rem;
 }
+
+/* 
+Login
+*/
+.login-container {
+  display: flex;
+}
+
+.login-left {
+  width: 50%;
+  min-height: 100vh;
+}
+
+.form-container {
+  padding: 3rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.f-back {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.login-right {
+  width: 50%;
+  min-height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),url('../img/login-img.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}

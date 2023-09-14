@@ -12,10 +12,11 @@ export default function Navbar () {
                 </button>
                 <div class="collapse navbar-collapse soft" id="navbarResponsive">
                     <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
-                        <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#why">why we ?</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#services">Hizmetlerimiz</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#why">Neden Biz ?</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#portfolio">Şirketlerimiz</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact">İletişim</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/login">Giriş Yap</a></li>
                     </ul>
                 </div>
             </div>

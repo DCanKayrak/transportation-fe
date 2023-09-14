@@ -16,7 +16,7 @@ export const Sidebar = () => {
                                 Kullanıcı İşlemleri <i class="fa-solid fa-angles-down" style={{ color: 'gray', fontSize: 0.75 + 'rem'}}></i>
                                 </a>
 
-                            <ul class="collapse" id="userDetails">
+                            <ul class="collapse soft" id="userDetails">
                             <li><a className='sidebar-nested-link'><i class="fa-solid fa-chevron-right sidebar-nested-icon"></i> test</a></li>
                             <li><a className='sidebar-nested-link'><i class="fa-solid fa-chevron-right sidebar-nested-icon"></i> test</a></li>
                             <li><a className='sidebar-nested-link'><i class="fa-solid fa-chevron-right sidebar-nested-icon"></i> test</a></li>
@@ -31,7 +31,7 @@ export const Sidebar = () => {
                                 Teslimat İşlemleri <i class="fa-solid fa-angles-down" style={{ color: 'gray', fontSize: 0.75 + 'rem'}}></i>
                                 </a>
 
-                            <ul class="collapse" id="orderDetails">
+                            <ul class="collapse soft" id="orderDetails">
                                 <li><a href='/control-panel/order-request' className='sidebar-nested-link'><i class="fa-solid fa-chevron-right sidebar-nested-icon"></i> Teslimat Oluştur</a></li>
                                 <li><a className='sidebar-nested-link'><i class="fa-solid fa-chevron-right sidebar-nested-icon"></i> Geçmiş Teslimatlarım</a></li>
                                 <li><a className='sidebar-nested-link'><i class="fa-solid fa-chevron-right sidebar-nested-icon"></i> test</a></li>
@@ -50,7 +50,7 @@ export const Sidebar = () => {
                                 Şirket İşlemleri <i class="fa-solid fa-angles-down" style={{ color: 'gray', fontSize: 0.75 + 'rem'}}></i>
                                 </a>
 
-                            <ul class="collapse" id="companyDetails">
+                            <ul class="collapse soft" id="companyDetails">
                             <li><a className='sidebar-nested-link'><i class="fa-solid fa-chevron-right sidebar-nested-icon"></i> Şirket Bilgileri</a></li>
                             <li><a className='sidebar-nested-link'><i class="fa-solid fa-chevron-right sidebar-nested-icon"></i> test</a></li>
                             <li><a className='sidebar-nested-link'><i class="fa-solid fa-chevron-right sidebar-nested-icon"></i> test</a></li>
@@ -65,7 +65,7 @@ export const Sidebar = () => {
                                 Çalışan İşlemleri <i class="fa-solid fa-angles-down" style={{ color: 'gray', fontSize: 0.75 + 'rem'}}></i>
                                 </a>
 
-                            <ul class="collapse" id="employeeDetails">
+                            <ul class="collapse soft" id="employeeDetails">
                                 <li><a className='sidebar-nested-link'><i class="fa-solid fa-chevron-right sidebar-nested-icon"></i> Çalışan Listesi</a></li>
                                 <li><a className='sidebar-nested-link'><i class="fa-solid fa-chevron-right sidebar-nested-icon"></i> Çalışan Düzenle</a></li>
                                 <li><a className='sidebar-nested-link'><i class="fa-solid fa-chevron-right sidebar-nested-icon"></i> Çalışan Ekle</a></li>
