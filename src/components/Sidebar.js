@@ -17,11 +17,7 @@ export const Sidebar = () => {
                                 </a>
 
                             <ul class="collapse soft" id="userDetails">
-                            <li><a className='sidebar-nested-link'><i class="fa-solid fa-chevron-right sidebar-nested-icon"></i> test</a></li>
-                            <li><a className='sidebar-nested-link'><i class="fa-solid fa-chevron-right sidebar-nested-icon"></i> test</a></li>
-                            <li><a className='sidebar-nested-link'><i class="fa-solid fa-chevron-right sidebar-nested-icon"></i> test</a></li>
-                            <li><a className='sidebar-nested-link'><i class="fa-solid fa-chevron-right sidebar-nested-icon"></i> test</a></li>
-                            <li><a className='sidebar-nested-link'><i class="fa-solid fa-chevron-right sidebar-nested-icon"></i> test</a></li>
+                            <li><a href='/control-panel/account-details' className='sidebar-nested-link'><i class="fa-solid fa-chevron-right sidebar-nested-icon"></i> Hesap Ayrıntıları</a></li>
                             </ul>
                         </li>
 
@@ -33,10 +29,7 @@ export const Sidebar = () => {
 
                             <ul class="collapse soft" id="orderDetails">
                                 <li><a href='/control-panel/order-request' className='sidebar-nested-link'><i class="fa-solid fa-chevron-right sidebar-nested-icon"></i> Teslimat Oluştur</a></li>
-                                <li><a className='sidebar-nested-link'><i class="fa-solid fa-chevron-right sidebar-nested-icon"></i> Geçmiş Teslimatlarım</a></li>
-                                <li><a className='sidebar-nested-link'><i class="fa-solid fa-chevron-right sidebar-nested-icon"></i> test</a></li>
-                                <li><a className='sidebar-nested-link'><i class="fa-solid fa-chevron-right sidebar-nested-icon"></i> test</a></li>
-                                <li><a className='sidebar-nested-link'><i class="fa-solid fa-chevron-right sidebar-nested-icon"></i> test</a></li>
+                                <li><a href='/control-panel/order-list' className='sidebar-nested-link'><i class="fa-solid fa-chevron-right sidebar-nested-icon"></i> Geçmiş Teslimatlarım</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -52,10 +45,6 @@ export const Sidebar = () => {
 
                             <ul class="collapse soft" id="companyDetails">
                             <li><a className='sidebar-nested-link'><i class="fa-solid fa-chevron-right sidebar-nested-icon"></i> Şirket Bilgileri</a></li>
-                            <li><a className='sidebar-nested-link'><i class="fa-solid fa-chevron-right sidebar-nested-icon"></i> test</a></li>
-                            <li><a className='sidebar-nested-link'><i class="fa-solid fa-chevron-right sidebar-nested-icon"></i> test</a></li>
-                            <li><a className='sidebar-nested-link'><i class="fa-solid fa-chevron-right sidebar-nested-icon"></i> test</a></li>
-                            <li><a className='sidebar-nested-link'><i class="fa-solid fa-chevron-right sidebar-nested-icon"></i> test</a></li>
                             </ul>
                         </li>
 
@@ -66,7 +55,7 @@ export const Sidebar = () => {
                                 </a>
 
                             <ul class="collapse soft" id="employeeDetails">
-                                <li><a className='sidebar-nested-link'><i class="fa-solid fa-chevron-right sidebar-nested-icon"></i> Çalışan Listesi</a></li>
+                                <li><a href='/control-panel/company/employee-list' className='sidebar-nested-link'><i class="fa-solid fa-chevron-right sidebar-nested-icon"></i> Çalışan Listesi</a></li>
                                 <li><a className='sidebar-nested-link'><i class="fa-solid fa-chevron-right sidebar-nested-icon"></i> Çalışan Düzenle</a></li>
                                 <li><a className='sidebar-nested-link'><i class="fa-solid fa-chevron-right sidebar-nested-icon"></i> Çalışan Ekle</a></li>
                                 <li><a className='sidebar-nested-link'><i class="fa-solid fa-chevron-right sidebar-nested-icon"></i> Çalışan Sil</a></li>

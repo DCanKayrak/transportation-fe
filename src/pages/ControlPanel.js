@@ -1,7 +1,7 @@
 import React from 'react'
 import { Sidebar } from '../components/Sidebar'
 import { PanelHeader } from '../components/PanelHeader'
-import { OrderPanel } from './OrderPanel'
+import { OrderPanel } from './customer/OrderPanel'
 
 export const ControlPanel = () => {
   return (

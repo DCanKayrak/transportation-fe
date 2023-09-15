@@ -1,6 +1,6 @@
 import React from 'react'
-import { Sidebar } from '../components/Sidebar'
-import { PanelHeader } from '../components/PanelHeader'
+import { Sidebar } from '../../components/Sidebar'
+import { PanelHeader } from '../../components/PanelHeader'
 
 export const OrderPanel = () => {
     return (
