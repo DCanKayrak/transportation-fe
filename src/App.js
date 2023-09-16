@@ -10,6 +10,7 @@ import { Register } from "./pages/Register";
 import { EmployeeList } from "./pages/corporate/EmployeeList";
 import { LastOrderList } from "./pages/customer/LastOrderList";
 import { AccountDetails } from "./pages/customer/AccountDetails";
+import { ErrorPage } from "./pages/ErrorPage";
 
 function App() {
   return (
@@ -30,6 +31,9 @@ function App() {
 
         {/* Corporate Panel */}
         <Route exact path='/control-panel/company/employee-list' element={<EmployeeList/>}/>
+
+        {/* Error Page */}
+        <Route exact path='*' element={<ErrorPage/>}/>
       </Routes>
     </div>
   );

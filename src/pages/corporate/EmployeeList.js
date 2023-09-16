@@ -1,10 +1,29 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Sidebar } from '../../components/Sidebar';
 import { PanelHeader } from '../../components/PanelHeader';
-import {EmployeeEditForm} from '../../components/panel/EmployeeEditForm';
+import { EmployeeEditForm } from '../../components/panel/EmployeeEditForm';
+import { GetWithoutAuth } from '../../service/HttpService';
 
 export const EmployeeList = () => {
-    const [employeeId,setEmployeeId] = useState();
+    const [employeeId, setEmployeeId] = useState();
+    const [todo, setTodo] = useState({});
+
+    const getEmployees = () => {
+        GetWithoutAuth("https://jsonplaceholder.typicode.com/posts/1")
+        .then((res) => res.json())
+        .then(
+            (result) => {
+                setTodo(result)
+            },
+            (error) => {
+                console.log(error)
+            }
+        )
+    }
+
+    useEffect(() => {
+        getEmployees()
+    },[])
 
     return (
         <div>
@@ -18,6 +37,7 @@ export const EmployeeList = () => {
                         <div className='orders'>
                             <div className='order-container'>
                                 <h3>Çalışan Listesi</h3>
+                                <h3>{todo.title} -123</h3>
                                 <hr></hr>
                                 <div className='table-container'>
                                     <table class="table">
@@ -43,22 +63,22 @@ export const EmployeeList = () => {
                                         </tbody>
                                     </table>
                                     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                    <div class="modal-dialog">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
-                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                            </div>
-                                            <div class="modal-body">
-                                                <EmployeeEditForm></EmployeeEditForm>
-                                            </div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                                <button type="button" class="btn btn-primary">Save changes</button>
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <EmployeeEditForm></EmployeeEditForm>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
                                 </div>
                             </div>
                         </div>
