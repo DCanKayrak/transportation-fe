@@ -12,6 +12,7 @@ export const CompanyDetails = (props) => {
         <Navbar/>
         <CompanyDetail companyId={companyId}/>
         <Footer/>
+        <div className='btn-close-sidebar'></div>
     </div>
   )
 }

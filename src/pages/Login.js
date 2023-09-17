@@ -34,6 +34,7 @@ export const Login = () => {
                 </div>
                 <div className='login-right'>
                 </div>
+                <div className='btn-close-sidebar'></div>
             </div>
         </div>
     )

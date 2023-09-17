@@ -3,17 +3,17 @@ import React from 'react'
 export const PanelHeader = () => {
     return (
         <div>
-            <header className='panel-header'>
-                <div class="dropdown text-end">
-                    <a href="#" class="d-block link-body-emphasis text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                        <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle"/>
+            <header className='panel-header d-flex justify-content-between'>
+                <div className='panel-start text-white px-3'><button type='button' className="dropdown-item btn-close-sidebar"><i class="fa-solid fa-bars fs-menu"></i></button></div>
+                <div className="dropdown panel-end">
+                    <a href="#" className="d-block link-body-emphasis text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" className="rounded-circle" />
                     </a>
-                    <ul class="dropdown-menu text-small">
-                        <li><a class="dropdown-item" href="#">New project...</a></li>
-                        <li><a class="dropdown-item" href="#">Settings</a></li>
-                        <li><a class="dropdown-item" href="#">Profile</a></li>
-                        <li><hr class="dropdown-divider"/></li>
-                        <li><a class="dropdown-item" href="#">Sign out</a></li>
+                    <ul className="dropdown-menu text-small dropdown-menu-end">
+                        <li><a className="dropdown-item" href="#">Settings</a></li>
+                        <li><a className="dropdown-item" href="#">Profile</a></li>
+                        <li><hr className="dropdown-divider" /></li>
+                        <li><a className="dropdown-item" href="#">Sign out</a></li>
                     </ul>
                 </div>
             </header>

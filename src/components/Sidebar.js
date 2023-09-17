@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 export const Sidebar = () => {
     return (
-        <div>
+        <aside id='sidebar' className=''>
             <div className='sidebar-container bg-dark px-3'>
                 <a class="sidebar-title" href="/"><i class="fa-solid fa-earth-europe"></i> TransGlobal</a>
                 <div className='sidebar-section'>
@@ -61,6 +61,6 @@ export const Sidebar = () => {
                     </ul>
                 </div>
             </div>
-        </div>
+        </aside>
     )
 }

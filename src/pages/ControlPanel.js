@@ -6,16 +6,10 @@ import { OrderPanel } from './customer/OrderPanel'
 export const ControlPanel = () => {
   return (
     <div className='wrapper'>
-      <div className='content-wrapper'>
-        <div className='row'>
-          <div className='w-10 g-0'>
-            <Sidebar></Sidebar>
-          </div>
-          <div className='w-90 g-0'>
-            <PanelHeader></PanelHeader>
-            
-          </div>
-        </div>
+      <Sidebar></Sidebar>
+      <div className='main'>
+        <PanelHeader></PanelHeader>
+        
       </div>
     </div>
   )

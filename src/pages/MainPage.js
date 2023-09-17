@@ -218,6 +218,7 @@ export const MainPage = () => {
         </div>
       </section>
       <Footer/>
+      <div className='btn-close-sidebar'></div>
     </div>
   )
 }

@@ -1,21 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="description" content="Web site created using create-react-app" />
+  <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+  <!--
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
     -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+  <!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.
       Only files inside the `public` folder can be referenced from the HTML.
@@ -24,22 +22,25 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>React App</title>
+  <title>React App</title>
 
-            <!-- Favicon-->
-            <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-            <!-- Font Awesome icons (free version)-->
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-            <!-- Google fonts-->
-            <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
-            <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
-            <!-- Core theme CSS (includes Bootstrap)-->
-            <link href="css/styles.css" rel="stylesheet" />
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
+  <!-- Favicon-->
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+  <!-- Font Awesome icons (free version)-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Google fonts-->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+  <!-- Core theme CSS (includes Bootstrap)-->
+  <link href="css/styles.css" rel="stylesheet" />
+</head>
+
+<body>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="root"></div>
+  <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
 
@@ -49,81 +50,92 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
-  </body>
-          <!-- Bootstrap core JS-->
-          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-          <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-          <!-- * *                               SB Forms JS                               * *-->
-          <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
-          <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+</body>
+<!-- Bootstrap core JS-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+<!-- * *                               SB Forms JS                               * *-->
+<!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
 
-          <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-          <script>
-            $(document).ready(function () {
-              var animatedSections = $('.animate-section');
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+  
+  window.addEventListener('DOMContentLoaded', event => {
 
-              var navbarShrink = function () {
-                const navbarCollapsible = document.body.querySelector('#mainNav');
-                if (!navbarCollapsible) {
-                    return;
-                }
-                if (window.scrollY === 0) {
-                    navbarCollapsible.classList.remove('navbar-shrink')
-                } else {
-                    navbarCollapsible.classList.add('navbar-shrink')
-                }
-        
-            };
-        
-            // Shrink the navbar 
-            navbarShrink();
-        
-            // Shrink the navbar when page is scrolled
-            document.addEventListener('scroll', navbarShrink);
-        
-            //  Activate Bootstrap scrollspy on the main nav element
-            const mainNav = document.body.querySelector('#mainNav');
-            if (mainNav) {
-                new bootstrap.ScrollSpy(document.body, {
-                    target: '#mainNav',
-                    rootMargin: '0px 0px -40%',
-                });
-            };
-        
-            // Collapse responsive navbar when toggler is visible
-            const navbarToggler = document.body.querySelector('.navbar-toggler');
-            const responsiveNavItems = [].slice.call(
-                document.querySelectorAll('#navbarResponsive .nav-link')
-            );
-            responsiveNavItems.map(function (responsiveNavItem) {
-                responsiveNavItem.addEventListener('click', () => {
-                    if (window.getComputedStyle(navbarToggler).display !== 'none') {
-                        navbarToggler.click();
-                    }
-                });
-            });
-          
-              function checkInView() {
-                animatedSections.each(function () {
-                  var elem = $(this);
-                  var windowHeight = $(window).height();
-                  var scroll = $(window).scrollTop();
-                  var elemTop = elem.offset().top;
-          
-                  if (elemTop < scroll + windowHeight - 100) {
-                    elem.addClass('animation-ready');
-                  }
-                });
-              }
 
-              $(".sidebar ul li").on('click', function(){
-                $(".sidebar ul li.active").removeClass('active');
-                $(this).addClass('active');
-            })
-          
-              $(window).on('load scroll', function () {
-                checkInView();
-              });
-            });
-          </script>
+    $(document).ready(function () {
+      var animatedSections = $('.animate-section');
+
+      var navbarShrink = function () {
+        const navbarCollapsible = document.body.querySelector('#mainNav');
+        if (!navbarCollapsible) {
+          return;
+        }
+        if (window.scrollY === 0) {
+          navbarCollapsible.classList.remove('navbar-shrink')
+        } else {
+          navbarCollapsible.classList.add('navbar-shrink')
+        }
+
+      };
+
+      // Shrink the navbar 
+      navbarShrink();
+
+      // Shrink the navbar when page is scrolled
+      document.addEventListener('scroll', navbarShrink);
+
+      //  Activate Bootstrap scrollspy on the main nav element
+      const mainNav = document.body.querySelector('#mainNav');
+      if (mainNav) {
+        new bootstrap.ScrollSpy(document.body, {
+          target: '#mainNav',
+          rootMargin: '0px 0px -40%',
+        });
+      };
+
+      // Collapse responsive navbar when toggler is visible
+      const navbarToggler = document.body.querySelector('.navbar-toggler');
+      const responsiveNavItems = [].slice.call(
+        document.querySelectorAll('#navbarResponsive .nav-link')
+      );
+      responsiveNavItems.map(function (responsiveNavItem) {
+        responsiveNavItem.addEventListener('click', () => {
+          if (window.getComputedStyle(navbarToggler).display !== 'none') {
+            navbarToggler.click();
+          }
+        });
+      });
+      function checkInView() {
+        animatedSections.each(function () {
+          var elem = $(this);
+          var windowHeight = $(window).height();
+          var scroll = $(window).scrollTop();
+          var elemTop = elem.offset().top;
+
+          if (elemTop < scroll + windowHeight - 100) {
+            elem.addClass('animation-ready');
+          }
+        });
+      }
+
+      const toggler = document.querySelector(".btn-close-sidebar");
+      toggler.addEventListener("click", function () {
+        document.querySelector("#sidebar").classList.toggle("collapsed");
+      });
+
+      $(".sidebar ul li").on('click', function () {
+        $(".sidebar ul li.active").removeClass('active');
+        $(this).addClass('active');
+      })
+
+      $(window).on('load scroll', function () {
+        checkInView();
+      });
+    });
+
+  });
+</script>
+
 </html>

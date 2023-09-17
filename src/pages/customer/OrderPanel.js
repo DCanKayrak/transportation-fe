@@ -5,14 +5,10 @@ import { PanelHeader } from '../../components/PanelHeader'
 export const OrderPanel = () => {
     return (
         <div className='wrapper'>
-            <div className='content-wrapper'>
-                <div className='row'>
-                    <div className='col-2 g-0'>
-                        <Sidebar></Sidebar>
-                    </div>
-                    <div className='col-10 g-0'>
-                        <PanelHeader></PanelHeader>
-                        <div className='orders'>
+            <Sidebar></Sidebar>
+            <div className='main'>
+                <PanelHeader></PanelHeader>
+                <div className='orders px-5 pt-3 pb-3'>
                             <div className='order-container'>
                                 <h3>Teslimat Oluştur</h3>
                                 <hr></hr>
@@ -62,8 +58,6 @@ export const OrderPanel = () => {
                                 </form>
                             </div>
                         </div>
-                    </div>
-                </div>
             </div>
         </div>
     )
