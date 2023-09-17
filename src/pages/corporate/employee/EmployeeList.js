@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import { Sidebar } from '../../components/Sidebar';
-import { PanelHeader } from '../../components/PanelHeader';
-import { EmployeeEditForm } from '../../components/panel/EmployeeEditForm';
-import { GetWithoutAuth } from '../../service/HttpService';
+import { Sidebar } from '../../../components/Sidebar';
+import { PanelHeader } from '../../../components/PanelHeader';
+import { EmployeeEditForm } from '../../../components/panel/EmployeeEditForm';
+import { GetWithoutAuth } from '../../../service/HttpService';
+import { EditModal } from './EditModal';
+import { DeleteModal } from './DeleteModal';
 
 export const EmployeeList = () => {
     const [employeeId, setEmployeeId] = useState();
@@ -57,28 +59,13 @@ export const EmployeeList = () => {
                                                 <td>Mark</td>
                                                 <td>Otto</td>
                                                 <td>@mdo</td>
-                                                <td><button className='btn btn-primary' data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fa-regular fa-pen-to-square"></i></button></td>
-                                                <td><button className='btn btn-danger'><i class="fa-solid fa-trash-can"></i></button></td>
+                                                <td><button className='btn btn-primary' data-bs-toggle="modal" data-bs-target="#editModal"><i class="fa-regular fa-pen-to-square"></i></button></td>
+                                                <td><button className='btn btn-danger' data-bs-toggle="modal" data-bs-target="#deleteModal"><i class="fa-solid fa-trash-can"></i></button></td>
                                             </tr>
                                         </tbody>
                                     </table>
-                                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                        <div class="modal-dialog">
-                                            <div class="modal-content">
-                                                <div class="modal-header">
-                                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
-                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                                </div>
-                                                <div class="modal-body">
-                                                    <EmployeeEditForm></EmployeeEditForm>
-                                                </div>
-                                                <div class="modal-footer">
-                                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                                    <button type="button" class="btn btn-primary">Save changes</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    <EditModal employeeId={1}/>
+                                    <DeleteModal/>
                                 </div>
                             </div>
                         </div>

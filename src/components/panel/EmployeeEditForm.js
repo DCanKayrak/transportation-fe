@@ -1,9 +1,9 @@
-import React from 'react'
+import React from 'react';
 
 export const EmployeeEditForm = (props) => {
   return (
     <div>
-        {props.id}
+        {props.employeeId}
     </div>
   )
 }

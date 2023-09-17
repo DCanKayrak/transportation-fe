@@ -56,9 +56,6 @@ export const Sidebar = () => {
 
                             <ul class="collapse soft" id="employeeDetails">
                                 <li><a href='/control-panel/company/employee-list' className='sidebar-nested-link'><i class="fa-solid fa-chevron-right sidebar-nested-icon"></i> Çalışan Listesi</a></li>
-                                <li><a className='sidebar-nested-link'><i class="fa-solid fa-chevron-right sidebar-nested-icon"></i> Çalışan Düzenle</a></li>
-                                <li><a className='sidebar-nested-link'><i class="fa-solid fa-chevron-right sidebar-nested-icon"></i> Çalışan Ekle</a></li>
-                                <li><a className='sidebar-nested-link'><i class="fa-solid fa-chevron-right sidebar-nested-icon"></i> Çalışan Sil</a></li>
                             </ul>
                         </li>
                     </ul>

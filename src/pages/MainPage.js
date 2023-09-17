@@ -6,9 +6,9 @@ import g_img2 from '../assets/img/goal/2.jpg';
 import g_img3 from '../assets/img/goal/3.jpg';
 import g_img4 from '../assets/img/goal/4.jpg';
 
-import p_img1 from '../assets/img/companies/aras.png';
+import p_img1 from '../assets/img/companies/aras.jpg';
 import p_img2 from '../assets/img/companies/mng.jpg';
-import p_img3 from '../assets/img/companies/ups.png';
+import p_img3 from '../assets/img/companies/ups.jpg';
 import p_img4 from '../assets/img/companies/ptt-kargo-logo.png';
 import p_img5 from '../assets/img/companies/dhl-logo.jpg';
 import p_img6 from '../assets/img/companies/yurtici.png';
@@ -109,7 +109,7 @@ export const MainPage = () => {
           <div class="row">
             <div class="col-lg-4 col-sm-6 mb-4">
               <div class="portfolio-item">
-                <a class="portfolio-link" href="/companies/aras">
+                <a class="portfolio-link" href="/companies/1">
                   <div class="portfolio-hover">
                     <div class="portfolio-hover-content">
                       <i class="fa-solid fa-dolly companies-icons"></i>

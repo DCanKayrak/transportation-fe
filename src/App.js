@@ -7,7 +7,7 @@ import { OrderPanel } from "./pages/customer/OrderPanel";
 import { Sidebar } from "./components/Sidebar";
 import { Login } from "./pages/Login";
 import { Register } from "./pages/Register";
-import { EmployeeList } from "./pages/corporate/EmployeeList";
+import { EmployeeList } from "./pages/corporate/employee/EmployeeList";
 import { LastOrderList } from "./pages/customer/LastOrderList";
 import { AccountDetails } from "./pages/customer/AccountDetails";
 import { ErrorPage } from "./pages/ErrorPage";

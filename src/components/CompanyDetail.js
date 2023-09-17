@@ -1,7 +1,26 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import p_img1 from '../assets/img/companies/ptt-kargo-logo.png';
+import companiesData from '../assets/companies.json';
+import { useNavigate } from "react-router";
 
-export const CompanyDetail = () => {
+export const CompanyDetail = (props) => {
+  const [company, setCompany] = useState({});
+  const navigate = useNavigate();
+
+  const getCompany = (companyId) => {
+    const company = companiesData.find(company => company.id === Number(companyId));
+
+    if(company == null) {
+      navigate("/page-not-found")
+    }
+
+    setCompany(company);
+  }
+
+  useEffect(() => {
+    getCompany(props.companyId)
+  },[])
+
   return (
     <section className='company-details'>
       <div className='container'>
@@ -9,7 +28,7 @@ export const CompanyDetail = () => {
           <a href='/'><i class="fa-solid fa-arrow-left f-back"></i></a>
         </div>
         <div className='company-details-header'>
-          <h3>Şirketimiz Hakkında</h3>
+          <h3>Şirketimiz Hakkında - {company.name}</h3>
           <hr></hr>
         </div>
         <div className='company-details-contents'>

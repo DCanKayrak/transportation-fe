@@ -8,10 +8,10 @@ export const ControlPanel = () => {
     <div className='wrapper'>
       <div className='content-wrapper'>
         <div className='row'>
-          <div className='col-2 g-0'>
+          <div className='w-10 g-0'>
             <Sidebar></Sidebar>
           </div>
-          <div className='col-10 g-0'>
+          <div className='w-90 g-0'>
             <PanelHeader></PanelHeader>
             
           </div>
