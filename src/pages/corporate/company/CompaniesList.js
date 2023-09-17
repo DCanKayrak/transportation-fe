@@ -1,26 +1,26 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { GetWithoutAuth } from '../../../service/HttpService';
 import { Sidebar } from '../../../components/Sidebar';
 import { PanelHeader } from '../../../components/PanelHeader';
-import { GetWithoutAuth } from '../../../service/HttpService';
-import { EditModal } from './EditModal';
-import { DeleteModal } from './DeleteModal';
-import { AddModal } from './AddModal';
 
-export const EmployeeList = () => {
-    const [driverList, setDriverList] = useState([]);
+export const CompaniesList = () => {
+    const [item, setItem] = useState(null);
+    const [companies, setCompanies] = useState([]);
     const [page, setPage] = useState(1);
 
-    const getEmployees = () => {
-        GetWithoutAuth("/api/Drivers/GetList?PageIndex=0&PageSize=10")
+    const getCompanies = () => {
+        GetWithoutAuth("/api/Companies/GetList?PageIndex=0&PageSize=10")
             .then((res) => res.json())
-            .then(
-                (result) => {
-                    setDriverList(result.items);
-                },
-                (error) => {
-                    console.log(error);
-                }
-            );
+            .then((result) => {
+                setItem(result);
+            });
+    };
+
+    const handleRequests = () => {
+        if (item) {
+            const companiesData = item.items;
+            setCompanies(companiesData);
+        }
     };
 
     const changePage = (num) => {
@@ -30,42 +30,43 @@ export const EmployeeList = () => {
     };
 
     useEffect(() => {
-        getEmployees();
+        getCompanies();
     }, []);
 
+    useEffect(() => {
+        handleRequests();
+    }, [item]);
+
     return (
-        <div className='wrapper'>
-            <Sidebar />
-            <div className='main'>
-                <PanelHeader />
-                <div className='orders px-5 pt-3 pb-3'>
-                    <div className='order-container'>
-                        <h3>Çalışan Listesi</h3>
-                        <hr />
-                        <button className='btn btn-primary mb-3' data-bs-toggle="modal" data-bs-target="#addModal">Çalışan Ekle</button>
-                        <div className='table-container'>
+        <div className="wrapper">
+            <Sidebar></Sidebar>
+            <div className="main">
+                <PanelHeader></PanelHeader>
+                <div className="orders px-5 pt-3 pb-3">
+                    <div className="order-container">
+                        <h3>Şirket Listesi</h3>
+                        <hr></hr>
+                        <div className="table-container">
                             <table className="table">
                                 <thead>
                                     <tr>
                                         <th scope="col">#</th>
-                                        <th scope="col">Ad</th>
-                                        <th scope="col">Soyad</th>
+                                        <th scope="col">İsim</th>
+                                        <th scope="col">Adres</th>
                                         <th scope="col">Telefon</th>
                                         <th scope="col">Email</th>
-                                        <th scope="col">Şirket İsmi</th>
                                         <th scope="col">Edit</th>
                                         <th scope="col">Delete</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    {driverList.map((d, index) => (
+                                    {companies.map((c, index) => (
                                         <tr key={index}>
                                             <th scope="row">{index + 1}</th>
-                                            <td>{d.name}</td>
-                                            <td>{d.surName}</td>
-                                            <td>{d.phone}</td>
-                                            <td>{d.email}</td>
-                                            <td>{d.companyName}</td>
+                                            <td>{c.name}</td>
+                                            <td>{c.address}</td>
+                                            <td>{c.phoneNumber}</td>
+                                            <td>{c.email}</td>
                                             <td>
                                                 <button
                                                     className="btn btn-primary"
@@ -86,25 +87,36 @@ export const EmployeeList = () => {
                                             </td>
                                         </tr>
                                     ))}
-
                                 </tbody>
                             </table>
                             <nav aria-label="...">
                                 <ul className="pagination">
                                     <li className="page-item">
-                                        <a className="page-link" onClick={() => changePage(-1)} tabIndex="-1"><span aria-hidden="true">&laquo;</span><span className="sr-only">Previous</span></a>
+                                        <a
+                                            className="page-link"
+                                            onClick={() => changePage(-1)}
+                                            tabIndex="-1"
+                                        >
+                                            <span aria-hidden="true">&laquo;</span>
+                                            <span className="sr-only">Previous</span>
+                                        </a>
                                     </li>
                                     <li className="page-item active">
-                                        <a className="page-link" href="#">{Number(page)}</a>
+                                        <a className="page-link" href="#">
+                                            {page}
+                                        </a>
                                     </li>
                                     <li className="page-item">
-                                        <a className="page-link" onClick={() => changePage(1)}><span aria-hidden="true">&raquo;</span><span className="sr-only">Next</span></a>
+                                        <a
+                                            className="page-link"
+                                            onClick={() => changePage(1)}
+                                        >
+                                            <span aria-hidden="true">&raquo;</span>
+                                            <span className="sr-only">Next</span>
+                                        </a>
                                     </li>
                                 </ul>
                             </nav>
-                            <AddModal/>
-                            <EditModal employeeId={1} />
-                            <DeleteModal />
                         </div>
                     </div>
                 </div>

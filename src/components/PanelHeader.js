@@ -1,6 +1,17 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom';
 
 export const PanelHeader = () => {
+
+    const navigate = useNavigate();
+
+    const handleLogout = () => {
+        localStorage.removeItem('userEmail');
+        localStorage.removeItem('token');
+
+        navigate("/");
+    }
+
     return (
         <div>
             <header className='panel-header d-flex justify-content-between'>
@@ -10,10 +21,11 @@ export const PanelHeader = () => {
                         <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" className="rounded-circle" />
                     </a>
                     <ul className="dropdown-menu text-small dropdown-menu-end">
+                        <li><a className="dropdown-item" href="#">{localStorage.getItem('userEmail')}</a></li>
                         <li><a className="dropdown-item" href="#">Settings</a></li>
                         <li><a className="dropdown-item" href="#">Profile</a></li>
                         <li><hr className="dropdown-divider" /></li>
-                        <li><a className="dropdown-item" href="#">Sign out</a></li>
+                        <li><a className="dropdown-item" onClick={() => handleLogout()}>Sign out</a></li>
                     </ul>
                 </div>
             </header>

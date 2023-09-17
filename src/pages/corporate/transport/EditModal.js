@@ -1,5 +1,6 @@
 import React from 'react';
-import { EmployeeEditForm } from '../../../components/panel/corporate/employee/EmployeeEditForm';
+import { TransportEditForm } from '../../../components/panel/corporate/transport/TransportEditForm';
+
 
 export const EditModal = (props) => {
     return (
@@ -12,7 +13,7 @@ export const EditModal = (props) => {
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                            <EmployeeEditForm employeeId={props.employeeId}></EmployeeEditForm>
+                            <TransportEditForm employeeId={props.employeeId}></TransportEditForm>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>

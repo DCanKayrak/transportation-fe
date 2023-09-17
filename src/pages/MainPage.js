@@ -26,7 +26,7 @@ export const MainPage = () => {
         <div class="container">
           <div class="masthead-subheading">TransGlobal'e Hoşgeldiniz</div>
           <div class="masthead-heading text-uppercase">Küresel Nakliyat Çözümleri</div>
-          <a class="btn btn-primary btn-xl text-uppercase" href="/control-panel">Hemen Başla</a>
+          <a class="btn btn-primary btn-xl text-uppercase" href="/login">Hemen Başla</a>
         </div>
       </header>
       <section class="page-section" id="services">

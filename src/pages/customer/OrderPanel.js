@@ -1,8 +1,32 @@
-import React from 'react'
-import { Sidebar } from '../../components/Sidebar'
-import { PanelHeader } from '../../components/PanelHeader'
+import React, { useState } from 'react';
+import { Sidebar } from '../../components/Sidebar';
+import { PanelHeader } from '../../components/PanelHeader';
+import { PostWithoutAuth } from '../../service/HttpService';
 
 export const OrderPanel = () => {
+    const [transportType, setTransportType] = useState(0);
+    const [reservationStatus, setReservationStatus] = useState(0);
+    const [date, setDate] = useState(null);
+
+    const sendRequest = (path) => {
+        PostWithoutAuth((path), {
+            transportType: transportType,
+            reservationStatus: reservationStatus,
+            date: date,
+          })
+          .then((res) => res.json())
+          .then((result) => {console.log(result)})
+          .catch((err) => console.log(err))
+    }
+
+    const handleCreate = () => {
+        setDate(new Date())
+        sendRequest("/api/Transportations/Add")
+        alert("Teslimatınız Başarıyla Oluşturuldu")
+    }
+
+
+
     return (
         <div className='wrapper'>
             <Sidebar></Sidebar>
@@ -14,46 +38,23 @@ export const OrderPanel = () => {
                                 <hr></hr>
                                 <form class="row g-3 mt-3">
                                     <div className='col-12'>
-                                        <select class="form-select" aria-label="Default select example">
-                                            <option selected>Taşımak istenilen şirket</option>
-                                            <option value="1">One</option>
-                                            <option value="2">Two</option>
-                                            <option value="3">Three</option>
+                                        <label for="inputAddress" class="form-label">Teslimat Tipi</label>
+                                        <select class="form-select" onChange = {(i) => setTransportType(i.target.value)} aria-label="Default select example">
+                                            <option value="0">Evden Eve</option>
+                                            <option value="1">Ofis</option>
+                                            <option value="2">Geniş Hacim Ve Ağırlık</option>
+                                        </select>
+                                    </div>
+
+                                    <div className='col-12'>
+                                        <label for="inputAddress" class="form-label">Aktiflik Durumu</label>
+                                        <select class="form-select" onChange = {(i) => setReservationStatus(i.target.value)} aria-label="Default select example">
+                                            <option value="0">Aktif</option>
+                                            <option value="1">Detaktif</option>
                                         </select>
                                     </div>
                                     <div class="col-12">
-                                        <label for="inputAddress" class="form-label">Address</label>
-                                        <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St" />
-                                    </div>
-                                    <div class="col-12">
-                                        <label for="inputAddress2" class="form-label">Address 2</label>
-                                        <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor" />
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label for="inputCity" class="form-label">City</label>
-                                        <input type="text" class="form-control" id="inputCity" />
-                                    </div>
-                                    <div class="col-md-4">
-                                        <label for="inputState" class="form-label">State</label>
-                                        <select id="inputState" class="form-select">
-                                            <option selected>Choose...</option>
-                                            <option>...</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-md-2">
-                                        <label for="inputZip" class="form-label">Zip</label>
-                                        <input type="text" class="form-control" id="inputZip" />
-                                    </div>
-                                    <div class="col-12">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" id="gridCheck" />
-                                            <label class="form-check-label" for="gridCheck">
-                                                Check me out
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="col-12">
-                                        <button type="submit" class="btn btn-primary">Sign in</button>
+                                        <button type="submit" onClick={() => handleCreate()} class="btn btn-primary">Oluştur</button>
                                     </div>
                                 </form>
                             </div>

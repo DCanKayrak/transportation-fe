@@ -5,6 +5,7 @@ import { useNavigate } from "react-router";
 
 export const CompanyDetail = (props) => {
   const [company, setCompany] = useState({});
+  
   const navigate = useNavigate();
 
   const getCompany = (companyId) => {

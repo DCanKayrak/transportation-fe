@@ -11,6 +11,12 @@ import { EmployeeList } from "./pages/corporate/employee/EmployeeList";
 import { LastOrderList } from "./pages/customer/LastOrderList";
 import { AccountDetails } from "./pages/customer/AccountDetails";
 import { ErrorPage } from "./pages/ErrorPage";
+import { TransportList } from "./pages/corporate/transport/TransportList";
+import { SendMessage } from "./pages/customer/message/SendMessage";
+import { CompanyInfos } from "./pages/corporate/company/CompanyInfos";
+import { CompaniesList } from "./pages/corporate/company/CompaniesList";
+import { MessageList } from "./pages/customer/message/MessageList";
+import { RatingPage } from "./pages/customer/rate/RatingPage";
 
 function App() {
   return (
@@ -27,10 +33,16 @@ function App() {
         <Route exact path='/control-panel/order-request' element={<OrderPanel/>}/>
         <Route exact path='/control-panel/order-list' element={<LastOrderList/>}/>
         <Route exact path='/control-panel/account-details' element={<AccountDetails/>}/>
+        <Route exact path='/control-panel/send-message' element={<SendMessage/>}/>
+        <Route exact path='/control-panel/messages' element={<MessageList/>}/>
+        <Route exact path='/control-panel/rating' element={<RatingPage/>}/>
         
 
         {/* Corporate Panel */}
+        <Route exact path='/control-panel/company/' element={<CompanyInfos/>}/>
+        <Route exact path='/control-panel/company/company-list' element={<CompaniesList/>}/>
         <Route exact path='/control-panel/company/employee-list' element={<EmployeeList/>}/>
+        <Route exact path='/control-panel/company/truck-list' element={<TransportList/>}/>
 
         {/* Error Page */}
         <Route exact path='*' element={<ErrorPage/>}/>

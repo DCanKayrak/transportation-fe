@@ -25,6 +25,7 @@ export const ErrorPage = () => {
                     </div>
                 </div>
             </section>
+            <div className='btn-close-sidebar'></div>
         </div>
     )
 }
