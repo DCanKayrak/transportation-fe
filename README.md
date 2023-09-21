@@ -1,6 +1,6 @@
 # Transportathon Projesi
 
-Bu proje Techcareer TransPortathon Hackathon kapsamında Nightmares Of Bugs takımı olarak geliştirdiğimiz projemizin front-end projesidir.
+Bu proje Techcareer TransPortathon Hackathon kapsamında Nightmares Of Bugs takımı olarak geliştirdiğimiz projemizin frontend projesidir.
 
 ## Kullanılan Teknolojiler
 * ReactJs
